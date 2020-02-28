@@ -7,12 +7,12 @@
   "author": "hache9669 <hm.ck.rc@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "aglio:api_sample": "aglio -i .\\api\\api_sample.md -o .\\dist\\api\\api_sample.html",
-    "build:api": "npm-run-all aglio:*",
-    "build": "npm-run-all build:*"
+    "build:api": "snowboard html -o .\\dist\\api\\apidoc.html .\\api\\api_sample.md",
+    "build": "npm-run-all build:*",
+    "mock":  "snowboard mock .\\api\\api_sample.md"
   },
   "devDependencies": {
-    "aglio": "^2.3.0",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "snowboard": "^3.7.1"
   }
 }
